@@ -1,4 +1,4 @@
-let amountOfParagrahps = 6;
+const amountOfParagrahps = 6;
 
 for (let i = 1; i <amountOfParagrahps ; i++) {
     const createParagraph = document.createElement('p');
