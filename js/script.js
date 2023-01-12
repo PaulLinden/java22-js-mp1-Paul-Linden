@@ -6,8 +6,8 @@ for (let i = 1; i <amountOfParagrahps ; i++) {
     document.body.append(createParagraph);
     createParagraph.innerText = 'Rad '+(i);
     
-    let hueForBackgroundColor = 100+(100*i/(amountOfParagrahps-1));
-    let fontSizeForParagraph = 10+(25*i/(amountOfParagrahps-1));
+    const hueForBackgroundColor = 100+(100*i/(amountOfParagrahps-1));
+    const fontSizeForParagraph = 10+(25*i/(amountOfParagrahps-1));
 
     createParagraph.style.backgroundColor = `hsla(${hueForBackgroundColor}, 90%, 85%, 1)`;
     createParagraph.style.textAlign = 'center';
@@ -17,7 +17,7 @@ for (let i = 1; i <amountOfParagrahps ; i++) {
 }
 //----------------------------------------------------
 
-let createDivForList = document.createElement('div');
+const createDivForList = document.createElement('div');
 document.body.append(createDivForList);
 createDivForList.style.border = 'solid black 2px';
 createDivForList.style.display = 'flex';
@@ -25,7 +25,7 @@ createDivForList.style.justifyContent = 'space-around';
 
 for (let j = 0; j < 3; j++) {
     
-    let createUnorderedList = document.createElement('ul');
+    const createUnorderedList = document.createElement('ul');
     createDivForList.append(createUnorderedList);
 
     createUnorderedList.classList.add('List' + j);
@@ -34,7 +34,8 @@ for (let j = 0; j < 3; j++) {
     createUnorderedList.style.padding = 0;
 
     for (let i = 0; i <= 9; i++) {
-        let createListItem = document.createElement('li');
+        
+        const createListItem = document.createElement('li');
         createUnorderedList.append(createListItem);
         createListItem.innerText = i;
         createListItem.style.width = '50px';
@@ -55,20 +56,20 @@ for (let j = 0; j < 3; j++) {
         }
     }
     
-    let highlightedItems = [4,18,25];
-    let getItem = document.querySelectorAll('li');
+    const highlightedItems = [4,18,25];
+    const getItem = document.querySelectorAll('li');
     getItem[highlightedItems[j]].style.backgroundColor = 'rgb(168,168,240)';
 }   
 
-let getList1 = document.querySelector(".List1");
-let getItemsList1 = document.querySelectorAll(".List1 li");
+const getList1 = document.querySelector(".List1");
+const getItemsList1 = document.querySelectorAll(".List1 li");
 
 for (let i = getItemsList1.length -1; i >= 0; i--) {
     getList1.append(getItemsList1[i]);
 }
 
-let numbersInText = ['ett','två','tre', 'fyra', 'fem', 'sex', 'sju', 'åtta', 'nio', 'tio']
-let getItemsList2 = document.querySelectorAll(".List2 li");
+const numbersInText = ['ett','två','tre', 'fyra', 'fem', 'sex', 'sju', 'åtta', 'nio', 'tio']
+const getItemsList2 = document.querySelectorAll(".List2 li");
 
 for (let i = 0; i < getItemsList2.length; i++) {
     getItemsList2[i].innerText = numbersInText[i];
