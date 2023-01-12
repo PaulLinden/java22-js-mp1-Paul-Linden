@@ -1,8 +1,7 @@
 let amountOfParagrahps = 6;
-//let fontSizeForParagraph = 10;
 
 for (let i = 1; i <amountOfParagrahps ; i++) {
-    let createParagraph = document.createElement('p');
+    const createParagraph = document.createElement('p');
     document.body.append(createParagraph);
     createParagraph.innerText = 'Rad '+(i);
     
